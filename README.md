@@ -1,15 +1,53 @@
 ## What's the Weather?
 # Description
 This application uses moment.js, JQuery, and OpenWeather API to show the weather in a given city. Users can search cities for a current and 5-day forecast. Each search is saved in local storage.
-# User Story
-GIVEN a weather dashboard with form inputs
-WHEN I search for a city
-THEN I am presented with current and future conditions for that city and that city is added to the search history
-WHEN I view current weather conditions for that city
-THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
-WHEN I view the UV index
-THEN I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
-WHEN I view future weather conditions for that city
-THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
-WHEN I click on a city in the search history
-THEN I am again presented with current and future conditions for that city
+# Table of Contents
+
+ * [Installation](#installation)
+
+ * [Usage](#usage)
+
+ * [License](#license)
+
+ * [Contributing](#contributing)
+
+ * [Tests](#tests)
+
+ * [Questions](#questions)
+
+ # Installation
+
+
+ Dependencies must be installed to run the application properly: 
+
+ * moment.js
+ *JQuery
+ 
+
+
+ # Usage
+
+ A Weather Dashboard that shows local weather.
+
+
+
+ # License
+
+ This project is license under the **MIT** license.
+
+
+ # Contributing
+
+ * Contributor: Ciara Hargis
+
+ # Tests
+
+None.
+
+ # Questions
+
+ * If you have any questions:-
+
+ * GitHub username: @numiblue
+
+ * Email: ciarahhargis@gmail.com

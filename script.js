@@ -178,5 +178,5 @@ $('#search-btn').on('click', function (event) {
 // load cities in local
 pullCities();
 whatCities(previCi);
-displayLastSearchedCity();
+
 
