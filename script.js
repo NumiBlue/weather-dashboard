@@ -14,7 +14,7 @@ const cityEl = $('h2#city');
 //Form and Stored
   const nextCity = $('#city-input');
 //function to sort
-let oldCities = [];
+let previCi = [];
 //local storage
 function compare(a, b) {
     // Use toUpperCase() to ignore character casing
@@ -31,12 +31,25 @@ function compare(a, b) {
 }
 //load past events
 function pullCities() {
-    const storedCities = JSON.parse(localStorage.getItem('oldCities'));
+    const storedCities = JSON.parse(localStorage.getItem('previCi'));
     if (storedCities) {
-        oldCities = storedCities;
+        previCi = storedCities;
     }
 }
 //store searched in loccal storage
 function storeCities() {
-    localStorage.setItem('oldCities', JSON.stringify(oldCities));
+    localStorage.setItem('previCi', JSON.stringify(previCi));
 }
+
+// Functions for the OpenWeather API call
+ 
+function createURL(city) {
+    if (city) {
+        return `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+    }
+}
+
+function createURLId(id) {
+    return `https://api.openweathermap.org/data/2.5/weather?id=${id}&appid=${apiKey}`;
+}
+
