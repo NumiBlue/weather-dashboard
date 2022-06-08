@@ -85,4 +85,26 @@ function whatWeather(queryURL) {
 $.ajax({
     url: queryURL,
     method: 'GET'
-}).then(function (response) {}
+}).then(function (response) 
+{
+    let city = response.name;
+    let id = response.id;
+    // Remove same cities
+    if (previCi[0]) {
+        previCi = $.grep(previCi, function (storedCity) {
+            return id !== storedCity.id;
+        })
+    }
+    previCi.unshift({ city, id });
+    storeCities();
+    whatCities(previCi);
+
+    // Display current weather
+    cityEl.text(response.name);
+    let formattedDate = moment.unix(response.dt).format('L');
+    dateEl.text(formattedDate);
+    let weatherIcon = response.weather[0].icon;
+    weatherIcon.attr('src', `http://openweathermap.org/img/wn/${weatherIcon}.png`).attr('alt', response.weather[0].description);
+    tempEl.html(((response.main.temp - 273.15) * 1.8 + 32).toFixed(1));
+    humidEl.text(response.main.humidity);
+    windEl.text((response.wind.speed * 2.237).toFixed(1));
