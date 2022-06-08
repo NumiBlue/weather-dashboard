@@ -49,7 +49,20 @@ function createURL(city) {
     }
 }
 
-function createURLId(id) {
+function createId(id) {
     return `https://api.openweathermap.org/data/2.5/weather?id=${id}&appid=${apiKey}`;
 }
 
+// Display Searched cities
+function whatCities(previCi) {
+    cityEl.empty();
+    previCi.splice(5);
+    let sortedCities = [...previCi];
+    sortedCities.sort(compare);
+    sortedCities.forEach(function (location) {
+        let cityDiv = $('<div>').addClass('col-12 city');
+        let cityBtn = $('<button>').addClass('btn btn-light city-btn').text(location.city);
+        cityDiv.append(cityBtn);
+        cityEl.append(cityDiv);
+    });
+}
