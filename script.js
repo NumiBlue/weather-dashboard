@@ -69,7 +69,7 @@ function whatCities(previCi) {
 
 // UV
 function setUVIndexColor(uvi) {
-    if (uvi < ) {
+    if (uvi < 3) {
         return 'green';
     } else if (uvi >= 3 && uvi < 6) {
         return 'yellow';
@@ -79,3 +79,10 @@ function setUVIndexColor(uvi) {
         return 'red';
     } else return 'black';
 }
+// Search using API
+function whatWeather(queryURL) {
+// Create an AJAX call 
+$.ajax({
+    url: queryURL,
+    method: 'GET'
+}).then(function (response) {}
