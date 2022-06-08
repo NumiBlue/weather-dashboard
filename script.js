@@ -173,3 +173,10 @@ $('#search-btn').on('click', function (event) {
     whatWeather(queryURL);
 });
 
+//Page Load
+
+// load cities in local
+pullCities();
+whatCities(previCi);
+displayLastSearchedCity();
+
