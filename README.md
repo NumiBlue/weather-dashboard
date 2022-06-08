@@ -31,6 +31,8 @@ This application uses moment.js, JQuery, and OpenWeather API to show the weather
 
 # ScreenShot
 
+    ![Weather-Dashboard](./assets/img/Screen%20Shot%202022-06-08%20at%206.02.41%20PM.pngassets/img/Screen Shot 2022-06-08 at 6.02.41 PM.png)
+    
 
  # License
 
