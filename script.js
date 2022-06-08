@@ -137,3 +137,18 @@ $.ajax({
 });
 });
 }
+// Show last searched
+function displayLastCity() {
+    if (previCi[0]) {
+        let queryURL = createID(previCi[0].id);
+        whatWeather(queryURL);
+    } else {
+        // if no past searched cities, load Austin weather data
+        let queryURL = createURL("Austin");
+        whatWeather(queryURL);
+    }
+}
+// on-click
+$('#search-btn').on('click', function (event) {
+    // Preventing the button from trying to submit the form
+    event.preventDefault();
