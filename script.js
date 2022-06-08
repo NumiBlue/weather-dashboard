@@ -66,3 +66,16 @@ function whatCities(previCi) {
         cityEl.append(cityDiv);
     });
 }
+
+// UV
+function setUVIndexColor(uvi) {
+    if (uvi < ) {
+        return 'green';
+    } else if (uvi >= 3 && uvi < 6) {
+        return 'yellow';
+    } else if (uvi >= 6 && uvi < 8) {
+        return 'orange';
+    } else if (uvi >= 8 && uvi < 11) {
+        return 'red';
+    } else return 'black';
+}
