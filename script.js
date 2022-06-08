@@ -108,3 +108,18 @@ $.ajax({
     tempEl.html(((response.main.temp - 273.15) * 1.8 + 32).toFixed(1));
     humidEl.text(response.main.humidity);
     windEl.text((response.wind.speed * 2.237).toFixed(1));
+
+    // Display 5 days
+    for (let i = 0; i <= 5; i++) {
+        let currDay = fiveDay[i];
+        $(`div.day-${i} .card-title`).text(moment.unix(currDay.dt).format('L'));
+        $(`div.day-${i} .fiveDay-img`).attr(
+            'src',
+            `http://openweathermap.org/img/wn/${currDay.weather[0].icon}.png`
+        ).attr('alt', currDay.weather[0].description);
+        $(`div.day-${i} .fiveDay-temp`).text(((currDay.temp.day - 273.15) * 1.8 + 32).toFixed(1));
+        $(`div.day-${i} .fiveDay-humid`).text(currDay.humidity);
+    }
+});
+});
+}
