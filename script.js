@@ -155,6 +155,21 @@ $('#search-btn').on('click', function (event) {
 
     let city = nextCity.val().trim();
         city = city.replace(' ', '%20');
+        nextCity.val('');
     
-    
+        if (city) {
+            let queryURL = createURL(city);
+            whatWeather(queryURL);
+        }
+    }); 
+
+   // on-click for weather
+   $(document).on("click", "button.city-btn", function (event) {
+    let clickedCity = $(this).text();
+    let foundCity = $.grep(previCi, function (storedCity) {
+        return clickedCity === storedCity.city;
     })
+    let queryURL = createID(foundCity[0].id)
+    whatWeather(queryURL);
+});
+
