@@ -152,3 +152,9 @@ function displayLastCity() {
 $('#search-btn').on('click', function (event) {
     // Preventing the button from trying to submit the form
     event.preventDefault();
+
+    let city = nextCity.val().trim();
+        city = city.replace(' ', '%20');
+    
+    
+    })
