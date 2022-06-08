@@ -29,6 +29,7 @@ This application uses moment.js, JQuery, and OpenWeather API to show the weather
 
  A Weather Dashboard that shows local weather.
 
+# ScreenShot
 
 
  # License
