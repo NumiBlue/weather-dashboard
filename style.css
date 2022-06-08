@@ -1,0 +1,17 @@
+/* Header */
+header {
+    background-color: #000120
+}
+div.title {
+    
+    color: white;
+    text-align: center;
+}
+div.title h1 {
+    padding: 10px;
+}
+
+/* Main content */
+main.dashboard {
+    background-color: rgb(247, 247, 247);
+}
